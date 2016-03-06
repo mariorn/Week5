@@ -1,0 +1,113 @@
+<html>
+<head>
+	<title>My Spotify</title>
+	<script src="jquery-2.1.4.js"></script>
+     <link rel="shortcut icon" href="https://developer.spotify.com/wp-content/themes/sp-wp-theme/images/favicon.png" type="image/png">
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+	<body>
+	<div class="widget">
+
+		<div class="row">
+		 <div class="col-lg-6">
+		    <div class="input-group">
+		      <input type="text" class="form-control" placeholder="Search song...">
+		      <span class="input-group-btn">
+		        <button class="btn btn-default js-search" type="button">Go!</button>
+		        <button class="btn btn-default js-see-more" type="button">More results</button>
+		      </span>
+		    </div><!-- /input-group -->
+		  </div><!-- /.col-lg-6 -->
+		</div>
+
+		<div class="header">
+
+		<!-- Try adding/removing these classes: -->
+		<!-- disabled -->
+		<!-- playing -->
+		<div class="btn-play disabled"></div>
+
+		<div class="metadata">
+		  <p class="title">Hunger of The Pine</p>
+		  <a class="author">alt-J</a>
+
+		  <div class="seekbar">
+		    <progress value="0" max="100"></progress>
+		  </div>
+		</div>
+		</div>
+		<div class="cover">
+			<img class="img-artist img-responsive js-cover-img" src="https://i.scdn.co/image/04da6dfc1f5f45fdeba938a0cc71cf372524fd43">
+		</div>
+
+		<audio class="js-player" src="https://p.scdn.co/mp3-preview/8e9c5ffdc38e91659bfe8b6bd44650dfc25a3d31"></audio>
+	</div>
+
+
+
+	<div class="modal fade js-modal">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+
+	      <div class="modal-header">
+	        <!-- Close button -->
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span>&times;</span>
+	        </button>
+
+	        <h2 class="modal-name">alt-J</h2>
+	        <img src='https://i.scdn.co/image/04da6dfc1f5f45fdeba938a0cc71cf372524fd43' class='img-responsive modal-photo'/>
+	      </div>
+
+	      <div class="modal-body">
+	        <dl class="dl-horizontal">
+						<dt>Genres:</dt>
+						<dd class="modal-genres">Pop</dd>
+						<dt>Popularity:</dt>
+						<dd class="modal-popularity">3</dd>
+						<dt>Followers:</dt>
+						<dd class="modal-followers">555</dd>
+	        </dl>
+	      </div>
+
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+	<div class="modal fade js-modal-results">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+
+	      <div class="modal-body-results">
+	        <dl class="dl-horizontal-results">
+
+	        </dl>
+	      </div>
+
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+
+	    </div><!-- /.modal-content -->
+	  </div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+
+	<script src="spotify.js"></script>
+</body>
+</html>
